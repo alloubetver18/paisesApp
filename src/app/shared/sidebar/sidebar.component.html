@@ -1,0 +1,28 @@
+<h2>Busquedas</h2>
+    <hr>
+    <ul class="list-group">
+      <!-- Algunos atributos para las rutas:
+      - routerLink: El nombre de la ruta declaraada en el archivo de enrutamiento, que cargará el componente correspondiente.
+      - routerLinkActive: Especifica, en el caso de ser el componente o ruta activa en este momento, la clase o clases que deben añadirse al elemento HTML. Muchas veces serán clases que alteren su apariencia.
+      - [routerLinkActiveOptions]: Escrito tal cual, añadirá algunas opciones adicionales. Por ejemplo, en el caso de que la ruta sea una cadena vacía (como por ejemplo,  cuando apunta a index), podemos añadir la propiedad '{exact: true}', y solo cuando la URL sea idéntica a lo que deseamos, añada el atributo.-->
+      <li
+        class="list-group-item"
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Buscar país
+      </li>
+      <li
+        class="list-group-item"
+        routerLink="region"
+        routerLinkActive="active">
+          Por region
+      </li>
+      <li
+        class="list-group-item"
+        routerLink="capital"
+        routerLinkActive="active">
+          por capital
+      </li>
+    </ul>

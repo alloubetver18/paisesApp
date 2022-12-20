@@ -1,0 +1,24 @@
+<h2>Por País</h2>
+<hr>
+
+<section class="row">
+  <section class="col">
+    <app-pais-input
+      (onEnter)="buscar( $event )"
+      (onDebounce)="sugerencias( $event )"
+      placeholder="Buscar País..."></app-pais-input>
+  </section>
+</section>
+<hr>
+
+<section *ngIf="hayError"
+  class="alert alert-danger">
+  <p>No se encontré nada con el término {{ termino }}</p>
+</section>
+
+<section *ngIf="paises.length > 0" class="row">
+  <section class="col">
+    <app-pais-tabla [paises]="paises"></app-pais-tabla>
+  </section>
+</section>
+
